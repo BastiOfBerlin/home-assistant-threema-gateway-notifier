@@ -1,0 +1,10 @@
+{
+  "domain": "threema-gateway",
+  "name": "Threema Gateway",
+  "version": "0.0.1",
+  "documentation": "https://www.example.com",
+  "dependencies": [],
+  "codeowners": ["@BastiOfBerlin"],
+  "requirements": ["threema.gateway==4.0.0"],
+  "iot_class": "cloud_push"
+}
