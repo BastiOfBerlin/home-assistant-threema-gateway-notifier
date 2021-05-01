@@ -14,10 +14,10 @@ notify:
   - name: threema
     platform: threema-gateway
     gateway_mode: "basic"
-    threema_id: "*THREEMA" # the sender id
-    secret: "id secret"
+    threema_id: "*MYAPIID" # the sender id
+    secret: !secret threema_secret # secret stores in secrets.yaml
     recipients: # one or more recipients
-      - "YOURID00"
+      - "ECHOECHO"
 ```
 
 ### End-to-end encrypted mode
