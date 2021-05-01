@@ -1,0 +1,19 @@
+{
+  "title": "Threema Gateway Nofifier",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Setup Threema ID",
+        "data": {
+          "threema_id": "API ID",
+          "secret": "API Secret",
+          "gateway_mode": "Gateway Mode",
+          "recipients": "List of Recipients"
+        }
+      }
+    },
+    "error": {
+      "invalid_sender_id": "Invalid sender id"
+    }
+  }
+}

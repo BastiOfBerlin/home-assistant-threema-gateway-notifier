@@ -11,6 +11,13 @@ from homeassistant.components.notify import (
 )
 import homeassistant.helpers.config_validation as cv
 
+from .const import (
+  CONF_SENDER_ID,
+  CONF_SENDER_SECRET,
+  CONF_ID_TYPE,
+  CONF_RECP_ID,
+)
+
 """ Threema Imports """
 from threema.gateway import (
   Connection,
@@ -20,11 +27,6 @@ from threema.gateway import (
 from threema.gateway.simple import TextMessage
 
 _LOGGER = logging.getLogger(__name__)
-
-CONF_SENDER_ID = "threema_id"
-CONF_SENDER_SECRET = "secret"
-CONF_ID_TYPE = "gateway_mode"
-CONF_RECP_ID = "recipients"
 
 ATTR_FILENAMES = "attachments"
 
@@ -39,7 +41,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
   }
 )
 
-def get_service(hass, config, discovery_info=None):
+async def async_get_service(hass, config, discovery_info=None):
   """Get the Threema Gateway notification service."""
 
   sender_id = config[CONF_SENDER_ID]
